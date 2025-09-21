@@ -5,6 +5,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: "Vee's Collection",
   description: 'Stand Out in Style.',
+  icons: {
+    icon: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+  },
 };
 
 export default function RootLayout({
