@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A stylish display of Vee's Collection Boxers.",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vees%20Collection%20Boxers.jpg",
-      "imageHint": "boxer shorts"
+      "description": "Abstract background for Vee's Collection hero section",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/background.png",
+      "imageHint": "dark fabric"
     },
     {
       "id": "about-image",
