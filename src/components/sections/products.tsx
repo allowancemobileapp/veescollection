@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -15,6 +14,7 @@ import {
   Palette,
   ShoppingBag,
   ShoppingCart,
+  Briefcase,
 } from 'lucide-react';
 import { BoxerIcon, TwoPieceIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
@@ -61,6 +61,20 @@ Key Features:
     icon: ShoppingBag,
     imageHint: 'fashion outfit',
     price: '₦30,000 – ₦45,000',
+  },
+  {
+    id: 'office-shirts',
+    title: 'Office Packet Shirts',
+    description: `Upgrade your workwear with our Office Package Shirts — sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts, they keep you looking confident from boardroom to after-work events.
+
+Key Features:
+- Crisp cotton & blended fabrics
+- Slim and regular fits available
+- Durable stitching for long-term wear
+- Elegant colors & patterns for daily rotation`,
+    icon: Briefcase,
+    imageHint: 'office shirt',
+    price: '₦15,000 – ₦30,000',
   },
   {
     id: 'bespoke-designs',

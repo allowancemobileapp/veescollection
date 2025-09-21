@@ -31,6 +31,12 @@
       "imageHint": "fashion outfit"
     },
     {
+      "id": "office-shirts",
+      "description": "Stylish office packet shirts",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/OFFICE%20WEARS.png",
+      "imageHint": "office shirt"
+    },
+    {
       "id": "bespoke-designs",
       "description": "Tailoring tools for bespoke designs",
       "imageUrl": "https://picsum.photos/seed/vec-bespoke/600/800",
