@@ -76,6 +76,20 @@ Key Features:
     imageHint: 'office shirt',
     price: '₦15,000 – ₦30,000',
   },
+  {
+    id: 'vintage-fabrics',
+    title: 'Vintage Fabrics',
+    description: `Discover the beauty of vintage fabrics with Vee’s Collection — timeless, unique, and full of character. Our carefully sourced fabrics are perfect for clients who want clothing that speaks of heritage, elegance, and individuality. Each fabric carries a cultural essence while being sustainable, versatile, and high quality, making it ideal for both traditional and contemporary designs.
+
+Key Features:
+- Premium quality vintage textiles
+- Rich patterns and bold colors
+- Durable, long-lasting material
+- Perfect for bespoke tailoring & creative projects`,
+    icon: Palette,
+    imageHint: 'vintage fabric',
+    price: '₦7,500 – ₦15,000 per yard',
+  },
 ];
 
 const WHATSAPP_URL = 'http://wa.me/2347066079296';

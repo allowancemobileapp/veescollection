@@ -35,6 +35,12 @@
       "description": "Stylish office packet shirts",
       "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/OFFICE%20WEARS.png",
       "imageHint": "office shirt"
+    },
+    {
+      "id": "vintage-fabrics",
+      "description": "A collection of colorful vintage fabrics",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vintage%20Fabrics.jpg",
+      "imageHint": "vintage fabric"
     }
   ]
 }
