@@ -8,9 +8,9 @@
     },
     {
       "id": "about-image",
-      "description": "A stylish person wearing a modern outfit",
-      "imageUrl": "https://picsum.photos/seed/vec-about/800/600",
-      "imageHint": "fashion model"
+      "description": "A cinematic shot of a person in a stylish outfit, conveying a sense of story and legacy.",
+      "imageUrl": "https://picsum.photos/seed/cinematic-fashion/800/600",
+      "imageHint": "cinematic fashion"
     },
     {
       "id": "boxers",
