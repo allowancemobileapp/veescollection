@@ -2,7 +2,7 @@
 
 import { useFormStatus } from 'react-dom';
 import { useEffect, useRef, useActionState } from 'react';
-import { Sparkles, Bot } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 import { handleCustomerQuery, type AIChatState } from '@/app/actions';
 import { Button } from '@/components/ui/button';
@@ -52,8 +52,7 @@ export function AiChat() {
         <div className="max-w-3xl mx-auto">
           <Card className="bg-background border-border/60 shadow-xl">
             <CardHeader className="text-center">
-              <CardTitle className="font-headline text-4xl text-primary flex items-center justify-center gap-3">
-                <Bot className="h-10 w-10" />
+              <CardTitle className="font-headline text-4xl text-primary">
                 AI Customer Assistant
               </CardTitle>
               <CardDescription className="text-lg text-foreground/80 pt-2">
