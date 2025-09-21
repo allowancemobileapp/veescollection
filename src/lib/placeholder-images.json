@@ -35,24 +35,6 @@
       "description": "Stylish office packet shirts",
       "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/OFFICE%20WEARS.png",
       "imageHint": "office shirt"
-    },
-    {
-      "id": "bespoke-designs",
-      "description": "Tailoring tools for bespoke designs",
-      "imageUrl": "https://picsum.photos/seed/vec-bespoke/600/800",
-      "imageHint": "tailoring scissors"
-    },
-    {
-      "id": "two-piece-sets",
-      "description": "Matching two-piece fashion sets",
-      "imageUrl": "https://picsum.photos/seed/vec-twopiece/600/800",
-      "imageHint": "matching set"
-    },
-    {
-      "id": "ankara-wears",
-      "description": "Vibrant and colorful ankara fabric",
-      "imageUrl": "https://picsum.photos/seed/vec-ankara/600/800",
-      "imageHint": "ankara fabric"
     }
   ]
 }

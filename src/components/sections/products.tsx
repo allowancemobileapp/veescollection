@@ -76,31 +76,6 @@ Key Features:
     imageHint: 'office shirt',
     price: '₦15,000 – ₦30,000',
   },
-  {
-    id: 'bespoke-designs',
-    title: 'Bespoke Designs',
-    description: 'Your unique style, perfectly tailored to your measurements.',
-    icon: Scissors,
-    imageHint: 'tailoring scissors',
-    price: 'Contact for price',
-  },
-  {
-    id: 'two-piece-sets',
-    title: 'Two-Piece Sets',
-    description: 'Chic and coordinated sets for a polished, modern look.',
-    icon: TwoPieceIcon,
-    imageHint: 'matching set',
-    price: 'Contact for price',
-  },
-  {
-    id: 'ankara-wears',
-    title: 'Ankara Wears',
-    description:
-      'Vibrant and bold, celebrating culture with contemporary style.',
-    icon: Palette,
-    imageHint: 'ankara fabric',
-    price: 'Contact for price',
-  },
 ];
 
 const WHATSAPP_URL = 'http://wa.me/2347066079296';
