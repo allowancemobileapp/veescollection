@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Abstract gold and black fabric texture",
-      "imageUrl": "https://picsum.photos/seed/vec-hero/1920/1080",
-      "imageHint": "fabric texture"
+      "description": "A stylish display of Vee's Collection Boxers.",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vees%20Collection%20Boxers.jpg",
+      "imageHint": "boxer shorts"
     },
     {
       "id": "about-image",
