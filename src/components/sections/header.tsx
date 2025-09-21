@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Gem } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -30,7 +30,7 @@ export function Header() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <Gem className="h-6 w-6 text-primary" />
+          <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={32} height={32} className="rounded-full" />
           <span className="font-bold font-headline text-lg">Vee's Collection</span>
         </Link>
 
@@ -46,7 +46,7 @@ export function Header() {
               <div className="p-4">
                 <div className="flex justify-between items-center mb-8">
                 <Link href="/" className="flex items-center gap-2">
-                  <Gem className="h-6 w-6 text-primary" />
+                  <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={32} height={32} className="rounded-full" />
                   <span className="font-bold font-headline text-lg">Vee's Collection</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={closeSheet}>

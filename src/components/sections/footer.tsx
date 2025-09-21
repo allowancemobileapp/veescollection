@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Gem, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import { Instagram } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
-            <Gem className="h-6 w-6 text-primary" />
+            <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={24} height={24} className="rounded-full" />
             <span className="font-bold font-headline text-lg">
               Vee's Collection
             </span>
