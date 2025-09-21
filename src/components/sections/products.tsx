@@ -22,11 +22,17 @@ import { Button } from '@/components/ui/button';
 const productCategories = [
   {
     id: 'boxers',
-    title: 'Boxers',
-    description: 'Ultimate comfort and style, designed for everyday luxury.',
+    title: 'Vee’s Collection Boxers',
+    description: `Our signature Boxas line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics, clean finishing, and modern cuts, these boxers are perfect for daily wear while keeping you stylish and confident. Whether at home or under your senator wear, Boxas give you that premium feel without the luxury price tag.
+
+Key Features:
+- Breathable cotton & blended fabrics
+- Soft waistband for all-day comfort
+- Durable stitching, long-lasting wash after wash
+- Available in multiple colors & sizes`,
     icon: BoxerIcon,
     imageHint: 'boxer shorts',
-    price: 'Contact for price'
+    price: '₦12,500',
   },
   {
     id: 'senator-wears',
@@ -40,7 +46,7 @@ Key Features:
 - Perfect for formal and semi-formal events`,
     icon: Shirt,
     imageHint: 'african attire',
-    price: '₦45,000 – ₦80,000'
+    price: '₦45,000 – ₦80,000',
   },
   {
     id: 'ready-to-wear',
@@ -54,7 +60,7 @@ Key Features:
 - Available in multiple sizes & colors`,
     icon: ShoppingBag,
     imageHint: 'fashion outfit',
-    price: '₦30,000 – ₦45,000'
+    price: '₦30,000 – ₦45,000',
   },
   {
     id: 'bespoke-designs',
@@ -62,7 +68,7 @@ Key Features:
     description: 'Your unique style, perfectly tailored to your measurements.',
     icon: Scissors,
     imageHint: 'tailoring scissors',
-    price: 'Contact for price'
+    price: 'Contact for price',
   },
   {
     id: 'two-piece-sets',
@@ -70,7 +76,7 @@ Key Features:
     description: 'Chic and coordinated sets for a polished, modern look.',
     icon: TwoPieceIcon,
     imageHint: 'matching set',
-    price: 'Contact for price'
+    price: 'Contact for price',
   },
   {
     id: 'ankara-wears',
@@ -79,7 +85,7 @@ Key Features:
       'Vibrant and bold, celebrating culture with contemporary style.',
     icon: Palette,
     imageHint: 'ankara fabric',
-    price: 'Contact for price'
+    price: 'Contact for price',
   },
 ];
 
