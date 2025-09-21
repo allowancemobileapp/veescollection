@@ -98,7 +98,7 @@ export function Products() {
             Explore our diverse range of fashion, crafted with quality, style, and value in mind.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-8">
           {productCategories.map((category) => {
             const productImage = PlaceHolderImages.find(
               (img) => img.id === category.id
