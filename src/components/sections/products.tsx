@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -12,8 +14,10 @@ import {
   Shirt,
   Palette,
   ShoppingBag,
+  ShoppingCart,
 } from 'lucide-react';
 import { BoxerIcon, TwoPieceIcon } from '@/components/icons';
+import { Button } from '@/components/ui/button';
 
 const productCategories = [
   {
@@ -54,11 +58,20 @@ const productCategories = [
   {
     id: 'ankara-wears',
     title: 'Ankara Wears',
-    description: 'Vibrant and bold, celebrating culture with contemporary style.',
+    description:
+      'Vibrant and bold, celebrating culture with contemporary style.',
     icon: Palette,
     imageHint: 'ankara fabric',
   },
 ];
+
+const WHATSAPP_URL = 'http://wa.me/2347066079296';
+
+function generateWhatsAppLink(productName: string) {
+  const message = `Hi, my name is ________\nI am interested in purchasing ${productName} from you`;
+  return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+}
+
 
 export function Products() {
   return (
@@ -81,7 +94,7 @@ export function Products() {
             return (
               <Card
                 key={category.id}
-                className="bg-background border-border/60 overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-primary/20"
+                className="bg-background border-border/60 overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-primary/20 flex flex-col"
               >
                 <div className="relative h-64 w-full">
                   {productImage && (
@@ -104,11 +117,19 @@ export function Products() {
                     {category.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <CardDescription className="text-base text-foreground/80">
                     {category.description}
                   </CardDescription>
                 </CardContent>
+                <CardFooter>
+                  <Button asChild className="w-full font-bold">
+                    <Link href={generateWhatsAppLink(category.title)} target="_blank">
+                      <ShoppingCart className="mr-2 h-5 w-5" />
+                      Order on WhatsApp
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             );
           })}
