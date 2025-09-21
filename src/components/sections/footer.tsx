@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary border-t border-border/40">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 md:px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
             <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={24} height={24} className="rounded-full" />

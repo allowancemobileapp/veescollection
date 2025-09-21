@@ -28,10 +28,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex items-center gap-4"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,11 +40,11 @@ export function Header() {
           <Image
             src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
             alt="Vee's Collection Logo"
-            width={32}
-            height={32}
+            width={40}
+            height={40}
             className="rounded-full"
           />
-          <span className="font-bold font-headline text-lg">
+          <span className="font-bold font-headline text-xl">
             Vee's Collection
           </span>
         </Link>
@@ -57,10 +57,10 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-full max-w-[320px] sm:max-w-sm">
               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-              <div className="p-4">
-                <div className="flex justify-between items-center mb-8">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-10">
                   <Link href="/" className="flex items-center gap-3">
                     <Image
                       src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
@@ -78,7 +78,7 @@ export function Header() {
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}

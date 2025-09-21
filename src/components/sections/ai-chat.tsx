@@ -47,7 +47,7 @@ export function AiChat() {
   }, [state, toast]);
 
   return (
-    <section id="ai-chat" className="py-20 md:py-24 lg:py-32 bg-secondary">
+    <section id="ai-chat" className="py-20 md:py-32 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <Card className="bg-background border-border/60 shadow-xl">
