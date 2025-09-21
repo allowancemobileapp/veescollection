@@ -5,7 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const navLinks = [
@@ -23,15 +28,25 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2"
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={32} height={32} className="rounded-full" />
-          <span className="font-bold font-headline text-lg">Vee's Collection</span>
+          <Image
+            src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
+            alt="Vee's Collection Logo"
+            width={32}
+            height={32}
+            className="rounded-full"
+          />
+          <span className="font-bold font-headline text-lg">
+            Vee's Collection
+          </span>
         </Link>
 
         {isMobile ? (
@@ -46,14 +61,22 @@ export function Header() {
               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="p-4">
                 <div className="flex justify-between items-center mb-8">
-                <Link href="/" className="flex items-center gap-2">
-                  <Image src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg" alt="Vee's Collection Logo" width={32} height={32} className="rounded-full" />
-                  <span className="font-bold font-headline text-lg">Vee's Collection</span>
-                </Link>
-                <Button variant="ghost" size="icon" onClick={closeSheet}>
-                  <X className="h-6 w-6" />
-                  <span className="sr-only">Close menu</span>
-                </Button>
+                  <Link href="/" className="flex items-center gap-3">
+                    <Image
+                      src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
+                      alt="Vee's Collection Logo"
+                      width={32}
+                      height={32}
+                      className="rounded-full"
+                    />
+                    <span className="font-bold font-headline text-lg">
+                      Vee's Collection
+                    </span>
+                  </Link>
+                  <Button variant="ghost" size="icon" onClick={closeSheet}>
+                    <X className="h-6 w-6" />
+                    <span className="sr-only">Close menu</span>
+                  </Button>
                 </div>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
@@ -71,7 +94,7 @@ export function Header() {
             </SheetContent>
           </Sheet>
         ) : (
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="flex items-center gap-8 text-sm">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
