@@ -25,25 +25,33 @@ export function About() {
             </h2>
             <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
               <p>
-                At Vees Collection, we believe fashion should be both affordable
-                and luxurious. Our brand is built on the mission of making style
-                accessible — offering you the elegance of high-end fashion at
-                prices that embrace sustainability and comfort.
+                Vee’s Collection was born from love, culture, and legacy.
               </p>
               <p>
-                We specialize in a wide range of fashion pieces, from boxers and
-                senator wears to ready-to-wear outfits, bespoke designs,
-                two-piece sets, and Ankara wears. Every piece is crafted with
-                care, ensuring that you don’t just wear clothes, but you stand
-                out in style.
+                In December 2022, this brand came to life in honor of my late
+                daughter, Valerie — a light who continues to inspire me every
+                day. Carrying her name forward, Vee’s Collection is more than
+                just clothing; it is a story of resilience, remembrance, and the
+                belief that fashion should make people feel seen, valued, and
+                confident.
               </p>
               <p>
-                Our goal is simple: to provide quality, style, and value —
-                giving you exactly what you ordered, exactly what your money is
-                worth, and more. For us, fashion isn’t just about clothing; it’s
-                about helping everyone express themselves with confidence,
-                regardless of budget. At Vees Collection, luxury is no longer out
-                of reach — it’s right here, for you.
+                Our mission is simple: to blend culture, sustainability, and
+                affordable luxury into timeless pieces that everyone can access.
+                From bespoke Senator wears to ready-to-wear outfits, elegant
+                boxers, and detailed beading works, every design is crafted to
+                make you stand out in style — no matter who you are, where you
+                come from, or what you do.
+              </p>
+              <p>
+                At Vee’s Collection, fashion isn’t just fabric. It’s a way of
+                celebrating heritage, creating memories, and making everyday
+                wear feel like luxury. When you wear Vee’s, you don’t just wear
+                clothing — you carry a story, a legacy, and a promise of style
+                that stands out.
+              </p>
+              <p className="font-bold">
+                ✨ Stand out in style. Stand with Vee’s.
               </p>
             </div>
           </div>
