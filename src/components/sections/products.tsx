@@ -26,13 +26,21 @@ const productCategories = [
     description: 'Ultimate comfort and style, designed for everyday luxury.',
     icon: BoxerIcon,
     imageHint: 'boxer shorts',
+    price: 'Contact for price'
   },
   {
     id: 'senator-wears',
     title: 'Senator Wears',
-    description: 'Exude elegance and confidence in our traditional attire.',
+    description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional Nigerian heritage with a modern luxury touch.
+
+Key Features:
+- Premium quality fabrics
+- Tailored fit, customizable designs
+- Cultural yet modern look
+- Perfect for formal and semi-formal events`,
     icon: Shirt,
     imageHint: 'african attire',
+    price: '₦45,000 – ₦80,000'
   },
   {
     id: 'ready-to-wear',
@@ -40,6 +48,7 @@ const productCategories = [
     description: 'Effortless style for any occasion, ready when you are.',
     icon: ShoppingBag,
     imageHint: 'fashion outfit',
+    price: 'Contact for price'
   },
   {
     id: 'bespoke-designs',
@@ -47,6 +56,7 @@ const productCategories = [
     description: 'Your unique style, perfectly tailored to your measurements.',
     icon: Scissors,
     imageHint: 'tailoring scissors',
+    price: 'Contact for price'
   },
   {
     id: 'two-piece-sets',
@@ -54,6 +64,7 @@ const productCategories = [
     description: 'Chic and coordinated sets for a polished, modern look.',
     icon: TwoPieceIcon,
     imageHint: 'matching set',
+    price: 'Contact for price'
   },
   {
     id: 'ankara-wears',
@@ -62,6 +73,7 @@ const productCategories = [
       'Vibrant and bold, celebrating culture with contemporary style.',
     icon: Palette,
     imageHint: 'ankara fabric',
+    price: 'Contact for price'
   },
 ];
 
@@ -118,9 +130,8 @@ export function Products() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <CardDescription className="text-base text-foreground/80">
-                    {category.description}
-                  </CardDescription>
+                  <p className="text-foreground/80 whitespace-pre-line">{category.description}</p>
+                   <p className="text-primary font-bold text-lg mt-4">{category.price}</p>
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full font-bold">
