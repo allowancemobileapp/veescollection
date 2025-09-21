@@ -98,7 +98,7 @@ export function Products() {
             Explore our diverse range of fashion, crafted with quality, style, and value in mind.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {productCategories.map((category) => {
             const productImage = PlaceHolderImages.find(
               (img) => img.id === category.id
@@ -145,6 +145,19 @@ export function Products() {
               </Card>
             );
           })}
+        </div>
+        <div className="mt-16 text-center">
+            <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary">
+                Beading Works & Custom Orders
+            </h3>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                We also offer handcrafted beading works and bespoke tailoring for clients who want a personalized luxury experience. Contact us directly for custom pricing.
+            </p>
+            <Button asChild size="lg" className="mt-6 font-bold">
+                <Link href="#contact">
+                    Request a Custom Order
+                </Link>
+            </Button>
         </div>
       </div>
     </section>
