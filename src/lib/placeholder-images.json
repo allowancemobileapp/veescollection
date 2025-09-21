@@ -8,9 +8,9 @@
     },
     {
       "id": "about-image",
-      "description": "A cinematic shot of a person in a stylish outfit, conveying a sense of story and legacy.",
-      "imageUrl": "https://picsum.photos/seed/cinematic-fashion/800/600",
-      "imageHint": "cinematic fashion"
+      "description": "A close-up of a tailor's hands meticulously working on a garment, symbolizing craftsmanship and legacy.",
+      "imageUrl": "https://picsum.photos/seed/tailor-craft/800/600",
+      "imageHint": "tailor hands"
     },
     {
       "id": "boxers",
