@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract gold and black fabric texture",
+      "imageUrl": "https://picsum.photos/seed/vec-hero/1920/1080",
+      "imageHint": "fabric texture"
+    },
+    {
+      "id": "about-image",
+      "description": "A stylish person wearing a modern outfit",
+      "imageUrl": "https://picsum.photos/seed/vec-about/800/600",
+      "imageHint": "fashion model"
+    },
+    {
+      "id": "boxers",
+      "description": "Comfortable and stylish boxer shorts",
+      "imageUrl": "https://picsum.photos/seed/vec-boxers/600/800",
+      "imageHint": "boxer shorts"
+    },
+    {
+      "id": "senator-wears",
+      "description": "Elegant senator wear for formal occasions",
+      "imageUrl": "https://picsum.photos/seed/vec-senator/600/800",
+      "imageHint": "african attire"
+    },
+    {
+      "id": "ready-to-wear",
+      "description": "Fashionable ready-to-wear outfits",
+      "imageUrl": "https://picsum.photos/seed/vec-rtw/600/800",
+      "imageHint": "fashion outfit"
+    },
+    {
+      "id": "bespoke-designs",
+      "description": "Tailoring tools for bespoke designs",
+      "imageUrl": "https://picsum.photos/seed/vec-bespoke/600/800",
+      "imageHint": "tailoring scissors"
+    },
+    {
+      "id": "two-piece-sets",
+      "description": "Matching two-piece fashion sets",
+      "imageUrl": "https://picsum.photos/seed/vec-twopiece/600/800",
+      "imageHint": "matching set"
+    },
+    {
+      "id": "ankara-wears",
+      "description": "Vibrant and colorful ankara fabric",
+      "imageUrl": "https://picsum.photos/seed/vec-ankara/600/800",
+      "imageHint": "ankara fabric"
+    }
+  ]
 }
