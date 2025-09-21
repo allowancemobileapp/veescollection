@@ -17,15 +17,13 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const WHATSAPP_URL = 'http://wa.me/2347066079296';
 
 const formSchema = z.object({
   name: z.string().min(2, {
     message: 'Name must be at least 2 characters.',
-  }),
-  email: z.string().email({
-    message: 'Please enter a valid email address.',
   }),
   message: z.string().min(10, {
     message: 'Message must be at least 10 characters.',
@@ -33,23 +31,18 @@ const formSchema = z.object({
 });
 
 export function Contact() {
-  const { toast } = useToast();
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
-      email: '',
       message: '',
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: "Thank you for reaching out. We'll get back to you soon.",
-    });
+    const message = `Hi, my name is ${values.name}.\n\n${values.message}`;
+    const whatsappLink = `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
     form.reset();
   }
 
@@ -104,22 +97,6 @@ export function Contact() {
                           <FormLabel className="text-lg">Name</FormLabel>
                           <FormControl>
                             <Input placeholder="Your Name" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-lg">Email</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="your.email@example.com"
-                              {...field}
-                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
