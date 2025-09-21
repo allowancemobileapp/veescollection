@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
+import { useEffect, useRef, useActionState } from 'react';
 import { Sparkles, Bot } from 'lucide-react';
 
 import { handleCustomerQuery, type AIChatState } from '@/app/actions';
@@ -29,7 +29,7 @@ function SubmitButton() {
 
 export function AiChat() {
   const initialState: AIChatState = { message: '', errors: {} };
-  const [state, dispatch] = useFormState(handleCustomerQuery, initialState);
+  const [state, dispatch] = useActionState(handleCustomerQuery, initialState);
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
 
