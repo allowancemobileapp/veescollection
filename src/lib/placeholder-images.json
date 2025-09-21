@@ -27,7 +27,7 @@
     {
       "id": "ready-to-wear",
       "description": "Fashionable ready-to-wear outfits",
-      "imageUrl": "https://picsum.photos/seed/vec-rtw/600/800",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Ready-to-Wear%20Outfits.jpg",
       "imageHint": "fashion outfit"
     },
     {

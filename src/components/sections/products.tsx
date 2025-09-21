@@ -44,11 +44,17 @@ Key Features:
   },
   {
     id: 'ready-to-wear',
-    title: 'Ready-to-Wear',
-    description: 'Effortless style for any occasion, ready when you are.',
+    title: 'Ready-to-Wear Outfits',
+    description: `Fashion should be effortless. Our Ready-to-Wear line brings you timeless pieces that are easy to style, comfortable, and sustainable. Designed for everyday use, these outfits deliver the perfect balance of affordability and luxury.
+
+Key Features:
+- Quick pick-and-wear convenience
+- Minimalist yet stylish cuts
+- High-quality finishing
+- Available in multiple sizes & colors`,
     icon: ShoppingBag,
     imageHint: 'fashion outfit',
-    price: 'Contact for price'
+    price: '₦30,000 – ₦45,000'
   },
   {
     id: 'bespoke-designs',
