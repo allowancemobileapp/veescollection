@@ -21,7 +21,7 @@ export function Hero() {
         />
       )}
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex flex-col items-center gap-6 p-4 max-w-4xl">
+      <div className="relative z-10 flex flex-col items-center gap-6 p-4 md:p-6 max-w-4xl">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary">
           Vee's Collection
         </h1>

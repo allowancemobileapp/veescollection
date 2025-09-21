@@ -47,8 +47,8 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 lg:py-32">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-5 gap-16 items-start">
           <div className="lg:col-span-2 flex flex-col gap-6">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
