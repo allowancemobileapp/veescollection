@@ -8,9 +8,9 @@
     },
     {
       "id": "about-image",
-      "description": "A close-up of a tailor's hands meticulously working on a garment, symbolizing craftsmanship and legacy.",
-      "imageUrl": "https://picsum.photos/seed/tailor-craft/800/600",
-      "imageHint": "tailor hands"
+      "description": "A stylish person in traditional attire, representing the brand's cultural roots.",
+      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/our%20story.jpg",
+      "imageHint": "fashion portrait"
     },
     {
       "id": "boxers",
