@@ -20,7 +20,7 @@ export function Hero() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
       <div className="relative z-10 flex flex-col items-center gap-6 p-4 md:p-6 max-w-4xl">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary">
           Vee's Collection
