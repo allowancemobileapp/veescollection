@@ -23,7 +23,7 @@ const productCategories = [
   {
     id: 'boxers',
     title: 'Vee’s Collection Boxers',
-    description: `Our signature Boxas line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics, clean finishing, and modern cuts, these boxers are perfect for daily wear while keeping you stylish and confident. Whether at home or under your senator wear, Boxas give you that premium feel without the luxury price tag.
+    description: `Our signature Boxers line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics, clean finishing, and modern cuts, these boxers are perfect for daily wear while keeping you stylish and confident. Whether at home or under your senator wear, Boxers give you that premium feel without the luxury price tag.
 
 Key Features:
 - Breathable cotton & blended fabrics
