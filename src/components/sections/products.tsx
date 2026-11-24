@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -11,8 +12,8 @@ import {
   ShoppingCart,
   Briefcase,
   ChevronRight,
+  Crown,
 } from 'lucide-react';
-import { BoxerIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import {
   Select,
@@ -43,8 +44,8 @@ const productCategories: ProductCategory[] = [
     id: 'boxers',
     title: 'Vee’s Collection Boxers',
     tagline: 'Comfort Meets Craft',
-    description: `Our signature Boxers line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics and modern cuts for the premium feel you deserve.`,
-    icon: BoxerIcon,
+    description: `Our signature Boxers line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics and modern cuts.`,
+    icon: ShoppingBag,
     imageHint: 'boxer shorts',
     price: '₦12,500',
     variants: [
@@ -59,10 +60,19 @@ const productCategories: ProductCategory[] = [
     id: 'senator-wears',
     title: 'Senator Wears',
     tagline: 'Cultural Distinction',
-    description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional heritage with a modern luxury touch.`,
+    description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional heritage with modern luxury.`,
     icon: Shirt,
     imageHint: 'african attire',
-    price: '₦45,000 – ₦80,000',
+    price: '₦80,000',
+  },
+  {
+    id: 'agbada',
+    title: 'Grand Agbada Set',
+    tagline: 'The Ultimate Statement',
+    description: `Exquisite Agbada designs crafted for royalty. Premium embroidery and high-quality fabrics that command respect at every occasion.`,
+    icon: Crown,
+    imageHint: 'luxury agbada',
+    price: '₦150,000 – ₦200,000',
   },
   {
     id: 'ready-to-wear',
@@ -77,7 +87,7 @@ const productCategories: ProductCategory[] = [
     id: 'office-shirts',
     title: 'Office Packet Shirts',
     tagline: 'The Professional Edge',
-    description: `Sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts, keeping you confident from boardroom to evening events.`,
+    description: `Sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts for the boardroom.`,
     icon: Briefcase,
     imageHint: 'office shirt',
     price: '₦15,000 – ₦30,000',
@@ -86,7 +96,7 @@ const productCategories: ProductCategory[] = [
     id: 'vintage-fabrics',
     title: 'Vintage Fabrics',
     tagline: 'Heritage in Thread',
-    description: `Carefully sourced fabrics full of character. Perfect for clients who want clothing that speaks of heritage, elegance, and distinct individuality.`,
+    description: `Carefully sourced fabrics full of character. Perfect for clients who want clothing that speaks of heritage and individuality.`,
     icon: Palette,
     imageHint: 'vintage fabric',
     price: '₦7,500 – ₦15,000 / yard',
@@ -136,7 +146,6 @@ export function Products() {
           ))}
         </div>
 
-        {/* Bespoke/Custom Orders Highlight */}
         <div className="mt-32 pt-20 border-t border-border/20 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <span className="text-xs uppercase tracking-[0.4em] font-medium text-primary">

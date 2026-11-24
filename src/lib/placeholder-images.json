@@ -41,6 +41,12 @@
       "description": "A collection of colorful vintage fabrics",
       "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vintage%20Fabrics.jpg",
       "imageHint": "vintage fabric"
+    },
+    {
+      "id": "agbada",
+      "description": "Premium Agbada set with intricate embroidery",
+      "imageUrl": "https://picsum.photos/seed/vees-agbada/800/1000",
+      "imageHint": "luxury agbada"
     }
   ]
 }
