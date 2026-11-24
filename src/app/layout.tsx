@@ -23,18 +23,8 @@ export const metadata: Metadata = {
   title: "Vee's Collection | Affordable African Luxury",
   description: 'Stand Out in Style. Contemporary African luxury fashion house specializing in bespoke Senator wears, ready-to-wear, and sustainable style.',
   icons: {
-    icon: [
-      {
-        url: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
-        href: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
-      }
-    ],
-    apple: [
-      {
-        url: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
-        href: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
-      }
-    ],
+    icon: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+    apple: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
   },
 };
 

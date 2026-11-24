@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,17 +41,31 @@
   }
 
   .dark {
-    /* Preserving a dark variant just in case, but styled for the new palette */
+    /* Rich Black background for dark mode */
     --background: 0 0% 9%;
     --foreground: 45 33% 95%;
+    
     --card: 0 0% 12%;
     --card-foreground: 45 33% 95%;
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 45 33% 95%;
+    
     --primary: 41 36% 55%;
     --primary-foreground: 0 0% 9%;
+    
     --secondary: 0 0% 15%;
     --secondary-foreground: 45 33% 95%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 41 36% 55%;
+    --accent-foreground: 0 0% 9%;
+    
     --border: 0 0% 20%;
     --input: 0 0% 20%;
+    --ring: 41 36% 55%;
   }
 }
 
