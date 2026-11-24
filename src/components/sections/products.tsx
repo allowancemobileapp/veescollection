@@ -1,12 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   Shirt,
@@ -101,7 +94,6 @@ export function Products() {
             const productImage = PlaceHolderImages.find(
               (img) => img.id === category.id
             );
-            const Icon = category.icon;
             return (
               <div
                 key={category.id}
@@ -119,9 +111,6 @@ export function Products() {
                     />
                   )}
                   <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-4 left-4 p-2 bg-background/80 backdrop-blur-sm">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
                 </div>
 
                 <div className="space-y-3 px-1">
