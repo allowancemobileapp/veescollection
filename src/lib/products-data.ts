@@ -80,7 +80,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     id: 'office-shirts',
-    title: 'Office Packet Shirts',
+    title: 'Office Shirt',
     tagline: 'The Professional Edge',
     description: `Sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts for the boardroom.`,
     images: ['https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/OFFICE%20WEARS.png'],
