@@ -13,21 +13,33 @@
       "imageHint": "fashion portrait"
     },
     {
-      "id": "boxers",
-      "description": "Comfortable and stylish boxer shorts",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vees%20Collection%20Boxers.jpg",
+      "id": "boxers-1",
+      "description": "Vee's Collection Boxers angle 1",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.50.01%20AM.jpeg",
       "imageHint": "boxer shorts"
     },
     {
-      "id": "senator-wears",
-      "description": "Elegant senator wear for formal occasions",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Senator%20Wears.jpg",
+      "id": "boxers-2",
+      "description": "Vee's Collection Boxers angle 2",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.50.01%20AM1.jpeg",
+      "imageHint": "boxer shorts"
+    },
+    {
+      "id": "senators-1",
+      "description": "Senator Wear angle 1",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.22%20AM6.jpeg",
       "imageHint": "african attire"
     },
     {
-      "id": "ready-to-wear",
-      "description": "Fashionable ready-to-wear outfits",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/ready%20to%20wear.jpg",
+      "id": "agbada-1",
+      "description": "Luxury Agbada angle 1",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.24%20AM13.jpeg",
+      "imageHint": "luxury agbada"
+    },
+    {
+      "id": "ready-to-wear-1",
+      "description": "Ready to wear angle 1",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.23%20AM10.jpeg",
       "imageHint": "fashion outfit"
     },
     {
@@ -41,12 +53,6 @@
       "description": "A collection of colorful vintage fabrics",
       "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vintage%20Fabrics.jpg",
       "imageHint": "vintage fabric"
-    },
-    {
-      "id": "agbada",
-      "description": "Premium Agbada set with intricate embroidery",
-      "imageUrl": "https://picsum.photos/seed/vees-agbada/800/1000",
-      "imageHint": "luxury agbada"
     }
   ]
 }
