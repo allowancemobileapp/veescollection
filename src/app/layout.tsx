@@ -1,7 +1,9 @@
+
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -21,7 +23,18 @@ export const metadata: Metadata = {
   title: "Vee's Collection | Affordable African Luxury",
   description: 'Stand Out in Style. Contemporary African luxury fashion house specializing in bespoke Senator wears, ready-to-wear, and sustainable style.',
   icons: {
-    icon: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+    icon: [
+      {
+        url: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+        href: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+      }
+    ],
+    apple: [
+      {
+        url: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+        href: 'https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg',
+      }
+    ],
   },
 };
 
@@ -31,10 +44,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <body className="font-body antialiased bg-background text-foreground">
-        {children}
-        <Toaster />
+    <html lang="en" suppressHydrationWarning className={`${cormorant.variable} ${dmSans.variable}`}>
+      <body className="font-body antialiased bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

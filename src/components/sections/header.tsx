@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -12,6 +13,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { ModeToggle } from '@/components/mode-toggle';
 
 const navLinks = [
   { href: '#about', label: 'Our Story' },
@@ -48,8 +50,10 @@ export function Header() {
           href="/"
           className="flex items-center gap-3 transition-transform hover:scale-105"
           onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.location.pathname === '/') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
           }}
         >
           <Image
@@ -65,7 +69,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -75,15 +79,19 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Button asChild variant="outline" size="sm" className="rounded-none border-primary/50 hover:border-primary hover:bg-primary/5 px-6 font-medium tracking-wider uppercase text-[10px]">
-            <Link href="http://wa.me/2347066079296" target="_blank">
-              WhatsApp Order
-            </Link>
-          </Button>
+          <div className="flex items-center gap-4 border-l border-border/20 pl-8">
+            <ModeToggle />
+            <Button asChild variant="outline" size="sm" className="rounded-none border-primary/50 hover:border-primary hover:bg-primary/5 px-6 font-medium tracking-wider uppercase text-[10px]">
+              <Link href="http://wa.me/2347066079296" target="_blank">
+                WhatsApp Order
+              </Link>
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-4">
+           <ModeToggle />
            <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="hover:bg-transparent">
