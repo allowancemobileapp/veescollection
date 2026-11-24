@@ -43,9 +43,7 @@ export const productCategories: ProductCategory[] = [
     description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional heritage with modern luxury.`,
     images: [
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.22%20AM6.jpeg',
-      'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.18%20AM.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.59.41%20AM.jpeg',
-      'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.18%20AM1.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.22%20AM7.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.59.41%20AM1.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.22%20AM8.jpeg',
@@ -71,6 +69,8 @@ export const productCategories: ProductCategory[] = [
     tagline: 'Effortless Elegance',
     description: `Timeless pieces that are easy to style and sustainable. Designed for everyday use, delivering the perfect balance of affordability and refined style.`,
     images: [
+      'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.18%20AM.jpeg',
+      'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.18%20AM1.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.23%20AM10.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.23%20AM11.jpeg',
       'https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-24%20at%2011.56.23%20AM9.jpeg',

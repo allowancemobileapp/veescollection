@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -69,12 +68,13 @@ export function Products() {
             opts={{
               align: 'start',
               loop: true,
+              watchDrag: true,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4 md:-ml-8">
               {productCategories.map((category) => (
-                <CarouselItem key={category.id} className="pl-4 md:pl-8 basis-full md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={category.id} className="pl-4 md:pl-8 basis-full md:basis-1/2 lg:basis-1/3 shrink-0">
                   <ProductCard category={category} />
                 </CarouselItem>
               ))}
@@ -118,12 +118,19 @@ export function ProductCard({ category }: { category: ProductCategory }) {
         {category.images.length > 1 ? (
           <Carousel 
             plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
-            opts={{ loop: true }} 
+            opts={{ 
+              loop: true,
+              watchDrag: (emblaApi) => {
+                // Prevent inner carousel from stealing drag events on mobile 
+                // if it would prevent the outer carousel from working smoothly
+                return true; 
+              }
+            }} 
             className="w-full h-full"
           >
-            <CarouselContent>
+            <CarouselContent className="h-full">
               {category.images.map((img, idx) => (
-                <CarouselItem key={idx} className="h-full relative aspect-[4/5]">
+                <CarouselItem key={idx} className="h-full relative shrink-0">
                   <Image
                     src={img}
                     alt={`${category.title} angle ${idx + 1}`}
@@ -134,8 +141,8 @@ export function ProductCard({ category }: { category: ProductCategory }) {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 bg-background/20 hover:bg-background/80 border-none h-8 w-8 text-foreground" />
-            <CarouselNext className="right-2 bg-background/20 hover:bg-background/80 border-none h-8 w-8 text-foreground" />
+            <CarouselPrevious className="left-2 bg-background/20 hover:bg-background/80 border-none h-8 w-8 text-foreground md:flex hidden" />
+            <CarouselNext className="right-2 bg-background/20 hover:bg-background/80 border-none h-8 w-8 text-foreground md:flex hidden" />
           </Carousel>
         ) : (
           <Image
