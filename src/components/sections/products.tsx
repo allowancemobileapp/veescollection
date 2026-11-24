@@ -9,27 +9,22 @@ import {
 } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
-  Scissors,
   Shirt,
   Palette,
   ShoppingBag,
   ShoppingCart,
   Briefcase,
+  ChevronRight,
 } from 'lucide-react';
-import { BoxerIcon, TwoPieceIcon } from '@/components/icons';
+import { BoxerIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 
 const productCategories = [
   {
     id: 'boxers',
     title: 'Vee’s Collection Boxers',
-    description: `Our signature Boxers line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics, clean finishing, and modern cuts, these boxers are perfect for daily wear while keeping you stylish and confident. Whether at home or under your senator wear, Boxers give you that premium feel without the luxury price tag.
-
-Key Features:
-- Breathable cotton & blended fabrics
-- Soft waistband for all-day comfort
-- Durable stitching, long-lasting wash after wash
-- Available in multiple colors & sizes`,
+    tagline: 'Comfort Meets Craft',
+    description: `Our signature Boxers line is crafted for comfort, durability, and everyday style. Designed with breathable fabrics and modern cuts for the premium feel you deserve.`,
     icon: BoxerIcon,
     imageHint: 'boxer shorts',
     price: '₦12,500',
@@ -37,27 +32,17 @@ Key Features:
   {
     id: 'senator-wears',
     title: 'Senator Wears',
-    description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional Nigerian heritage with a modern luxury touch.
-
-Key Features:
-- Premium quality fabrics
-- Tailored fit, customizable designs
-- Cultural yet modern look
-- Perfect for formal and semi-formal events`,
+    tagline: 'Cultural Distinction',
+    description: `Step into culture and class with our bespoke Senator Wears. Each piece is tailored with precision, blending traditional heritage with a modern luxury touch.`,
     icon: Shirt,
     imageHint: 'african attire',
     price: '₦45,000 – ₦80,000',
   },
   {
     id: 'ready-to-wear',
-    title: 'Ready-to-Wear Outfits',
-    description: `Fashion should be effortless. Our Ready-to-Wear line brings you timeless pieces that are easy to style, comfortable, and sustainable. Designed for everyday use, these outfits deliver the perfect balance of affordability and luxury.
-
-Key Features:
-- Quick pick-and-wear convenience
-- Minimalist yet stylish cuts
-- High-quality finishing
-- Available in multiple sizes & colors`,
+    title: 'Ready-to-Wear',
+    tagline: 'Effortless Elegance',
+    description: `Timeless pieces that are easy to style and sustainable. Designed for everyday use, delivering the perfect balance of affordability and refined style.`,
     icon: ShoppingBag,
     imageHint: 'fashion outfit',
     price: '₦30,000 – ₦45,000',
@@ -65,13 +50,8 @@ Key Features:
   {
     id: 'office-shirts',
     title: 'Office Packet Shirts',
-    description: `Upgrade your workwear with our Office Package Shirts — sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts, they keep you looking confident from boardroom to after-work events.
-
-Key Features:
-- Crisp cotton & blended fabrics
-- Slim and regular fits available
-- Durable stitching for long-term wear
-- Elegant colors & patterns for daily rotation`,
+    tagline: 'The Professional Edge',
+    description: `Sharp, stylish, and tailored for professionals. Made with breathable fabrics and sleek cuts, keeping you confident from boardroom to evening events.`,
     icon: Briefcase,
     imageHint: 'office shirt',
     price: '₦15,000 – ₦30,000',
@@ -79,99 +59,118 @@ Key Features:
   {
     id: 'vintage-fabrics',
     title: 'Vintage Fabrics',
-    description: `Discover the beauty of vintage fabrics with Vee’s Collection — timeless, unique, and full of character. Our carefully sourced fabrics are perfect for clients who want clothing that speaks of heritage, elegance, and individuality. Each fabric carries a cultural essence while being sustainable, versatile, and high quality, making it ideal for both traditional and contemporary designs.
-
-Key Features:
-- Premium quality vintage textiles
-- Rich patterns and bold colors
-- Durable, long-lasting material
-- Perfect for bespoke tailoring & creative projects`,
+    tagline: 'Heritage in Thread',
+    description: `Carefully sourced fabrics full of character. Perfect for clients who want clothing that speaks of heritage, elegance, and distinct individuality.`,
     icon: Palette,
     imageHint: 'vintage fabric',
-    price: '₦7,500 – ₦15,000 per yard',
+    price: '₦7,500 – ₦15,000 / yard',
   },
 ];
 
 const WHATSAPP_URL = 'http://wa.me/2347066079296';
 
 function generateWhatsAppLink(productName: string) {
-  const message = `Hi, my name is ________\nI am interested in purchasing ${productName} from you`;
+  const message = `Hi, I am interested in purchasing ${productName} from Vee's Collection.`;
   return `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`;
 }
 
-
 export function Products() {
   return (
-    <section id="products" className="py-20 md:py-32 bg-secondary">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">
-            Our Collection
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-            Explore our diverse range of fashion, crafted with quality, style, and value in mind.
-          </p>
+    <section id="products" className="py-24 md:py-40 bg-secondary/20">
+      <div className="container mx-auto px-4 md:px-10">
+        
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
+          <div className="space-y-4 max-w-2xl">
+            <span className="text-xs uppercase tracking-[0.4em] font-medium text-primary">The Collection</span>
+            <h2 className="font-headline text-5xl md:text-7xl font-light text-foreground leading-tight">
+              Curated <span className="italic font-medium">Excellence</span>
+            </h2>
+            <p className="text-muted-foreground text-sm tracking-wide max-w-md">
+              Explore our diverse range of fashion, where every thread is chosen with quality, style, and accessible luxury in mind.
+            </p>
+          </div>
+          <div className="hidden md:block">
+             <Link href="#contact" className="group flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-primary hover:text-foreground transition-colors">
+               Request Custom Piece <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+             </Link>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-10">
           {productCategories.map((category) => {
             const productImage = PlaceHolderImages.find(
               (img) => img.id === category.id
             );
             const Icon = category.icon;
             return (
-              <Card
+              <div
                 key={category.id}
-                className="bg-background border-border/60 overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg hover:shadow-primary/20 flex flex-col"
+                className="group flex flex-col"
               >
-                <div className="relative h-64 w-full">
+                <div className="relative aspect-[4/5] w-full overflow-hidden mb-6 bg-secondary/50">
                   {productImage && (
                     <Image
                       src={productImage.imageUrl}
                       alt={category.title}
                       fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       data-ai-hint={productImage.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-white">
-                     <Icon className="h-10 w-10 text-primary mb-2" />
+                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-4 left-4 p-2 bg-background/80 backdrop-blur-sm">
+                    <Icon className="h-5 w-5 text-primary" />
                   </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-2xl text-primary">
+
+                <div className="space-y-3 px-1">
+                   <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-primary/70 block">{category.tagline}</span>
+                   <h3 className="font-headline text-3xl font-light text-foreground group-hover:text-primary transition-colors">
                     {category.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-foreground/80 whitespace-pre-line">{category.description}</p>
-                   <p className="text-primary font-bold text-lg mt-4">{category.price}</p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild className="w-full font-bold">
-                    <Link href={generateWhatsAppLink(category.title)} target="_blank">
-                      <ShoppingCart className="mr-2 h-5 w-5" />
-                      Order on WhatsApp
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 min-h-[2.8rem]">
+                    {category.description}
+                  </p>
+                  <p className="text-foreground font-semibold tracking-wider text-sm mt-4">
+                    {category.price}
+                  </p>
+                  
+                  <div className="pt-4">
+                    <Link 
+                      href={generateWhatsAppLink(category.title)} 
+                      target="_blank"
+                      className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-foreground hover:text-primary transition-colors border-b border-foreground hover:border-primary pb-1"
+                    >
+                      <ShoppingCart className="h-3 w-3" />
+                      Order via WhatsApp
                     </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
-        <div className="mt-20 text-center">
-            <h3 className="font-headline text-3xl md:text-4xl font-bold text-primary">
-                Beading Works & Custom Orders
-            </h3>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                We also offer handcrafted beading works and bespoke tailoring for clients who want a personalized luxury experience. Contact us directly for custom pricing.
-            </p>
-            <Button asChild size="lg" className="mt-6 font-bold">
-                <Link href="#contact">
-                    Request a Custom Order
-                </Link>
-            </Button>
+
+        {/* Bespoke/Custom Orders Highlight */}
+        <div className="mt-32 pt-20 border-t border-border/20 text-center">
+            <div className="max-w-3xl mx-auto space-y-8">
+                <span className="text-xs uppercase tracking-[0.4em] font-medium text-primary">Exclusive Services</span>
+                <h3 className="font-headline text-5xl md:text-6xl font-light text-foreground">
+                    Made for You. <br />
+                    <span className="italic font-medium">Designed to Stand Out.</span>
+                </h3>
+                <p className="text-muted-foreground leading-relaxed tracking-wide">
+                    We also offer handcrafted beading works and bespoke tailoring for clients who seek a personalized luxury experience. Each custom order is a collaboration between your vision and our craftsmanship.
+                </p>
+                <div className="pt-4">
+                  <Button asChild size="lg" className="rounded-none bg-primary text-background hover:bg-foreground transition-all duration-500 font-medium tracking-widest uppercase text-[10px] px-12 h-14">
+                      <Link href="#contact">
+                          Request A Custom Order
+                      </Link>
+                  </Button>
+                </div>
+            </div>
         </div>
       </div>
     </section>

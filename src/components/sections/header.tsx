@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -11,10 +11,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
+  { href: '#about', label: 'Our Story' },
   { href: '#products', label: 'Collection' },
   { href: '#contact', label: 'Contact' },
   { href: '#faq', label: 'FAQ' },
@@ -22,16 +22,31 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const closeSheet = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+    <header
+      className={cn(
+        'fixed top-0 z-50 w-full transition-all duration-500 ease-in-out px-4 md:px-10 h-20 flex items-center justify-between',
+        scrolled 
+          ? 'bg-background/95 backdrop-blur-md border-b border-border/20 shadow-sm h-16' 
+          : 'bg-transparent'
+      )}
+    >
+      <div className="container flex items-center justify-between mx-auto">
         <Link
           href="/"
-          className="flex items-center gap-4"
+          className="flex items-center gap-3 transition-transform hover:scale-105"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,72 +55,80 @@ export function Header() {
           <Image
             src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
             alt="Vee's Collection Logo"
-            width={40}
-            height={40}
-            className="rounded-full"
+            width={scrolled ? 32 : 40}
+            height={scrolled ? 32 : 40}
+            className="rounded-full shadow-md"
           />
-          <span className="font-bold font-headline text-xl">
+          <span className="font-headline font-semibold text-xl tracking-wide uppercase">
             Vee's Collection
           </span>
         </Link>
 
-        {isMobile ? (
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-xs uppercase tracking-widest font-medium text-foreground/70 hover:text-primary transition-colors duration-300"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Button asChild variant="outline" size="sm" className="rounded-none border-primary/50 hover:border-primary hover:bg-primary/5 px-6 font-medium tracking-wider uppercase text-[10px]">
+            <Link href="http://wa.me/2347066079296" target="_blank">
+              WhatsApp Order
+            </Link>
+          </Button>
+        </nav>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center gap-4">
+           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="hover:bg-transparent">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-[320px] sm:max-w-sm">
+            <SheetContent side="right" className="w-full bg-background border-l-0 p-0">
               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-10">
-                  <Link href="/" className="flex items-center gap-3">
-                    <Image
-                      src="https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/logo.jpg"
-                      alt="Vee's Collection Logo"
-                      width={32}
-                      height={32}
-                      className="rounded-full"
-                    />
-                    <span className="font-bold font-headline text-lg">
-                      Vee's Collection
-                    </span>
-                  </Link>
-                  <Button variant="ghost" size="icon" onClick={closeSheet}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
-                </div>
-                <nav className="flex flex-col gap-6">
+              <div className="flex flex-col h-full p-8 pt-20">
+                <nav className="flex flex-col gap-8">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium hover:text-primary transition-colors"
+                      className="font-headline text-3xl font-light hover:text-primary transition-colors"
                       onClick={closeSheet}
                     >
                       {link.label}
                     </Link>
                   ))}
+                  <Link 
+                    href="http://wa.me/2347066079296" 
+                    className="font-headline text-3xl font-light text-primary flex items-center gap-3"
+                    onClick={closeSheet}
+                  >
+                    WhatsApp Order <ShoppingCart className="h-6 w-6" />
+                  </Link>
                 </nav>
+                <div className="mt-auto pt-10 border-t border-border/20">
+                   <p className="text-xs uppercase tracking-widest text-muted-foreground">Vee's Collection</p>
+                   <p className="text-xs mt-2 text-muted-foreground/60 italic">Stand out in style.</p>
+                </div>
               </div>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="absolute top-6 right-6" 
+                onClick={closeSheet}
+              >
+                <X className="h-6 w-6" />
+              </Button>
             </SheetContent>
           </Sheet>
-        ) : (
-          <nav className="flex items-center gap-8 text-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-medium text-foreground/60 transition-colors hover:text-foreground/80"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        )}
+        </div>
       </div>
     </header>
   );
