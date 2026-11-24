@@ -111,6 +111,9 @@ export function Products() {
                     />
                   )}
                   <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                     <category.icon className="h-4 w-4 text-primary" />
+                  </div>
                 </div>
 
                 <div className="space-y-3 px-1">
