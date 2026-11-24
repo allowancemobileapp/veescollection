@@ -25,9 +25,14 @@ export function Hero() {
           </div>
           
           <div className="max-w-md space-y-6">
-            <p className="text-xl md:text-2xl font-headline italic text-foreground/80 leading-relaxed">
-              Stand Out in Style.
-            </p>
+            <div className="space-y-2">
+              <p className="text-xl md:text-2xl font-headline italic text-foreground/80 leading-relaxed">
+                Stand Out in Style.
+              </p>
+              <p className="text-[10px] md:text-xs font-headline italic text-primary/90 tracking-[0.2em] uppercase font-medium">
+                Inspired by Valerie, rooted in legacy
+              </p>
+            </div>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed tracking-wide">
               Discover affordable luxury and make your style accessible with our
               exquisite fashion pieces, crafted to make you shine with confidence and cultural pride.

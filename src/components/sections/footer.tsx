@@ -23,9 +23,14 @@ export function Footer() {
                 Vee's Collection
               </span>
             </Link>
-            <p className="text-sm text-background/60 font-headline italic text-xl max-w-xs">
-              "Stand Out in Style."
-            </p>
+            <div className="space-y-2">
+              <p className="text-sm text-background/60 font-headline italic text-xl max-w-xs">
+                "Stand Out in Style."
+              </p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-primary/60 font-medium max-w-xs">
+                Inspired by Valerie, rooted in legacy
+              </p>
+            </div>
             <p className="text-xs text-background/40 max-w-sm leading-relaxed tracking-wider uppercase font-medium">
               A contemporary African luxury fashion house born from legacy, culture, and love.
             </p>
