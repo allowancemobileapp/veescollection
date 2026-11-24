@@ -1,10 +1,10 @@
-
 import { Header } from '@/components/sections/header';
 import { Footer } from '@/components/sections/footer';
-import { ProductCard, productCategories } from '@/components/sections/products';
+import { ProductCard } from '@/components/sections/products';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { productCategories } from '@/lib/products-data';
 
 export default function CollectionPage() {
   return (
