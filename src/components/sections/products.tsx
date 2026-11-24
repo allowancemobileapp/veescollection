@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -22,6 +23,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import { productCategories, type ProductCategory, type ProductVariant } from '@/lib/products-data';
 
 const WHATSAPP_URL = 'http://wa.me/2347066079296';
@@ -63,6 +65,7 @@ export function Products() {
 
         <div className="relative">
           <Carousel
+            plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
             opts={{
               align: 'start',
               loop: true,
@@ -113,7 +116,11 @@ export function ProductCard({ category }: { category: ProductCategory }) {
     <div className="group flex flex-col h-full bg-background/40 backdrop-blur-sm border border-border/10 p-4 transition-all hover:bg-background/80 hover:shadow-2xl">
       <div className="relative aspect-[4/5] w-full overflow-hidden mb-6 bg-secondary/50">
         {category.images.length > 1 ? (
-          <Carousel opts={{ loop: true }} className="w-full h-full">
+          <Carousel 
+            plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
+            opts={{ loop: true }} 
+            className="w-full h-full"
+          >
             <CarouselContent>
               {category.images.map((img, idx) => (
                 <CarouselItem key={idx} className="h-full relative aspect-[4/5]">
@@ -145,7 +152,7 @@ export function ProductCard({ category }: { category: ProductCategory }) {
         <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-primary/70 block">
           {category.tagline}
         </span>
-        <h3 className="font-headline text-3xl font-light text-foreground group-hover:text-primary transition-colors">
+        <h3 className="font-headline text-3xl font-light text-foreground group-hover:text-primary transition-colors text-balance">
           {category.title}
         </h3>
         <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 min-h-[2.8rem]">
