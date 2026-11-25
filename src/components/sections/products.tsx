@@ -114,7 +114,7 @@ export function ProductCard({ category }: { category: ProductCategory }) {
 
   return (
     <div className="group flex flex-col h-full bg-background/40 backdrop-blur-sm border border-border/10 p-4 transition-all hover:bg-background/80 hover:shadow-2xl">
-      <div className="relative aspect-[4/5] w-full overflow-hidden mb-6 bg-secondary/50">
+      <div className="relative w-full mb-6">
         {category.images.length > 1 ? (
           <Carousel 
             plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
@@ -122,18 +122,20 @@ export function ProductCard({ category }: { category: ProductCategory }) {
               loop: true,
               watchDrag: true
             }} 
-            className="w-full h-full"
+            className="w-full"
           >
-            <CarouselContent className="h-full">
+            <CarouselContent className="-ml-0">
               {category.images.map((img, idx) => (
-                <CarouselItem key={idx} className="h-full relative shrink-0">
-                  <Image
-                    src={img}
-                    alt={`${category.title} angle ${idx + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
+                <CarouselItem key={idx} className="pl-0 shrink-0">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-secondary/50">
+                    <Image
+                      src={img}
+                      alt={`${category.title} angle ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -141,13 +143,15 @@ export function ProductCard({ category }: { category: ProductCategory }) {
             <CarouselNext className="right-2 bg-background/20 hover:bg-background/80 border-none h-8 w-8 text-foreground md:flex hidden" />
           </Carousel>
         ) : (
-          <Image
-            src={category.images[0]}
-            alt={category.title}
-            fill
-            className="object-cover transition-transform duration-1000 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
+          <div className="relative aspect-[4/5] w-full overflow-hidden bg-secondary/50">
+            <Image
+              src={category.images[0]}
+              alt={category.title}
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+          </div>
         )}
       </div>
 
