@@ -53,6 +53,24 @@
       "description": "A collection of colorful vintage fabrics",
       "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/Vintage%20Fabrics.jpg",
       "imageHint": "vintage fabric"
+    },
+    {
+      "id": "review-1",
+      "description": "Customer Review 1",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-25%20at%2012.20.34%20AM.jpeg",
+      "imageHint": "customer review"
+    },
+    {
+      "id": "review-2",
+      "description": "Customer Review 2",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-25%20at%2012.21.17%20AM.jpeg",
+      "imageHint": "customer review"
+    },
+    {
+      "id": "review-3",
+      "description": "Customer Review 3",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-25%20at%2012.21.54%20AM.jpeg",
+      "imageHint": "customer review"
     }
   ]
 }

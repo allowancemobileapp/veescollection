@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/sections/header';
 import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
@@ -7,6 +8,7 @@ import { Contact } from '@/components/sections/contact';
 import { AiChat } from '@/components/sections/ai-chat';
 import { Faq } from '@/components/sections/faq';
 import { Footer } from '@/components/sections/footer';
+import { Reviews } from '@/components/sections/reviews';
 
 export default function Home() {
   return (
@@ -17,6 +19,7 @@ export default function Home() {
         <About />
         <Location />
         <Products />
+        <Reviews />
         <Contact />
         <AiChat />
         <Faq />
