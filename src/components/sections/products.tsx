@@ -120,11 +120,7 @@ export function ProductCard({ category }: { category: ProductCategory }) {
             plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
             opts={{ 
               loop: true,
-              watchDrag: (emblaApi) => {
-                // Prevent inner carousel from stealing drag events on mobile 
-                // if it would prevent the outer carousel from working smoothly
-                return true; 
-              }
+              watchDrag: true
             }} 
             className="w-full h-full"
           >
@@ -137,6 +133,7 @@ export function ProductCard({ category }: { category: ProductCategory }) {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    unoptimized={img.includes('supabase')}
                   />
                 </CarouselItem>
               ))}
@@ -151,6 +148,7 @@ export function ProductCard({ category }: { category: ProductCategory }) {
             fill
             className="object-cover transition-transform duration-1000 group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, 33vw"
+            unoptimized={category.images[0].includes('supabase')}
           />
         )}
       </div>
