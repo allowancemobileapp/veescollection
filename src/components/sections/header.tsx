@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -39,16 +38,16 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 z-50 w-full transition-all duration-500 ease-in-out px-4 md:px-10 h-20 flex items-center justify-between',
+        'fixed top-0 z-50 w-full transition-all duration-500 ease-in-out px-4 md:px-10 h-20 flex items-center',
         scrolled 
           ? 'bg-background/95 backdrop-blur-md border-b border-border/20 shadow-sm h-16' 
           : 'bg-transparent'
       )}
     >
-      <div className="container flex items-center justify-between mx-auto">
+      <div className="container flex items-center justify-between mx-auto w-full">
         <Link
           href="/"
-          className="flex items-center gap-3 transition-transform hover:scale-105"
+          className="flex items-center gap-3 transition-transform hover:scale-105 shrink-0"
           onClick={(e) => {
             if (window.location.pathname === '/') {
               e.preventDefault();
@@ -63,25 +62,25 @@ export function Header() {
             height={scrolled ? 32 : 40}
             className="rounded-full shadow-md"
           />
-          <span className="font-headline font-semibold text-xl tracking-wide uppercase">
+          <span className="font-headline font-semibold text-lg md:text-xl tracking-wide uppercase whitespace-nowrap">
             Vee's Collection
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 ml-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs uppercase tracking-widest font-medium text-foreground/70 hover:text-primary transition-colors duration-300"
+              className="text-[10px] xl:text-xs uppercase tracking-widest font-medium text-foreground/70 hover:text-primary transition-colors duration-300 whitespace-nowrap"
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex items-center gap-4 border-l border-border/20 pl-8">
+          <div className="flex items-center gap-4 border-l border-border/20 pl-6 xl:pl-8 ml-2">
             <ModeToggle />
-            <Button asChild variant="outline" size="sm" className="rounded-none border-primary/50 hover:border-primary hover:bg-primary/5 px-6 font-medium tracking-wider uppercase text-[10px]">
+            <Button asChild variant="outline" size="sm" className="rounded-none border-primary/50 hover:border-primary hover:bg-primary/5 px-4 xl:px-6 font-medium tracking-wider uppercase text-[10px]">
               <Link href="http://wa.me/2347066079296" target="_blank">
                 WhatsApp Order
               </Link>
@@ -89,8 +88,8 @@ export function Header() {
           </div>
         </nav>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-4">
+        {/* Mobile/Tablet Navigation Trigger */}
+        <div className="lg:hidden flex items-center gap-4">
            <ModeToggle />
            <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
