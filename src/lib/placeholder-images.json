@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Abstract background for Vee's Collection hero section",
-      "imageUrl": "https://crwwlgwjdclhvwqwspoa.supabase.co/storage/v1/object/public/veescollection/background.png",
-      "imageHint": "dark fabric"
+      "description": "Main showcase image for Vee's Collection hero section",
+      "imageUrl": "https://grhwtudwzekvunecehtb.supabase.co/storage/v1/object/public/bbf/WhatsApp%20Image%202026-11-25%20at%2011.46.26%20PM%20(1).jpeg",
+      "imageHint": "fashion showcase"
     },
     {
       "id": "about-image",
